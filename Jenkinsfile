@@ -24,6 +24,9 @@ bat'mvn install'
 }
 }
 }
+
+stage ('Email Notification) {
+steps {
 post {
     failure {
       // The developer setting up this job can specify which group should receive an email when the build fails
