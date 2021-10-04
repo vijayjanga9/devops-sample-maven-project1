@@ -24,3 +24,12 @@ bat'mvn install'
 }
 }
 }
+post {
+    failure {
+      // The developer setting up this job can specify which group should receive an email when the build fails
+      mail to: "${emailRecipient}",
+        subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+        body: "Something is wrong with ${env.BUILD_URL}"
+    }
+  }
+}
