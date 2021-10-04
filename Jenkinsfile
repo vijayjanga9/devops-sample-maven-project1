@@ -27,7 +27,7 @@ bat'mvn install'
 post {
     failure {
       // The developer setting up this job can specify which group should receive an email when the build fails
-      mail to: "${emailRecipient}",
+      mail to: "${vijaydocs100@gmail.com}",
         subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
         body: "Something is wrong with ${env.BUILD_URL}"
     }
